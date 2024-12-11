@@ -10,7 +10,7 @@ public class matrixmult{
         return false;
     }
 
-    public static int dotProduct (int[] a, int[] b){
+    public static int getEntry (int[] a, int[] b){
         int sum = 0;
         for (int i = 0; i < a.length, i++){
             sum += a[i] * b[i];
@@ -22,9 +22,11 @@ public class matrixmult{
             throw new Exception ("Incorrect dimensions.");
         }
         int[][] product = new int[a.length][b[0].length]
-        for (int i = 0; i < product.length; i++){
-            for (int j = 0; j < product[0].length; j++){
-                
+        for (int i = 0; i < a.length; i++){
+            for (int j = 0; j < b[0].length; j++){
+                int[] column = int [b.length];
+                for (int )
+                product[i][j] = dotProduct (a[i], )
             }
         }
         
