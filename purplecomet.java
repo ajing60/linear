@@ -10,6 +10,7 @@ public class purplecomet {
             num /= 2;
         }
         System.out.println (num);
+        System.out.println (Math.sqrt (k));
         for (int k =3 ;k < Math.sqrt (k);  k += 2 ){
             if (num % k == 0){
                 System.out.println (k );
