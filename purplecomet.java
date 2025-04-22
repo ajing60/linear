@@ -20,6 +20,6 @@ public class purplecomet {
         }
         System.out.println (num);
         sum += num;
-        System.out.rpintln (sum);
+        System.out.println (sum);
     }
 }
