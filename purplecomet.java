@@ -4,7 +4,7 @@ public class purplecomet {
         for (int i = 2; i < 199; i += 3) {
             num += Math.pow (i, 2) - 4 * i;
         }
-        
+        System.out.println (num);
         if (num % 2 == 0) {
             System.out.println ("2 is a factor");
         }
