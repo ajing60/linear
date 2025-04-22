@@ -7,11 +7,12 @@ public class purplecomet {
         System.out.println (num);
         if (num % 2 == 0) {
             System.out.println ("2 is a factor");
+            num /= 2;
         }
         for (int k =3 ;k < Math.sqrt (k);  k += 2 ){
             if (num % k == 0){
-            System.out.println (k );
-            num /= k;
+                System.out.println (k );
+                num /= k;
             }
         }
     }
