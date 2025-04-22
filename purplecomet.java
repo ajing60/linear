@@ -24,6 +24,6 @@ public class purplecomet {
         int a = 108 + 486 + 12* 216 + 1;
         System.out.println (a); */
 
-        System.out.println (Math.sqrt (Math.exp (82, 2) - 4 * 9 * 9));
+        System.out.println (Math.sqrt (Math.exp (82.0, 2.0) - 4 * 9 * 9));
     }
 }
