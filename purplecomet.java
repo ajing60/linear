@@ -1,6 +1,6 @@
 public class purplecomet {
     public static void main (String[] args) {
-        double num = Math.pow (199, 2);
+        /*double num = Math.pow (199, 2);
         int sum = 0;
         for (int i = 2; i < 199; i += 3) {
             num += Math.pow (i, 2) - 4 * i;
@@ -22,6 +22,8 @@ public class purplecomet {
         sum += num;
         System.out.println (sum);
         int a = 108 + 486 + 12* 216 + 1;
-        System.out.println (a);
+        System.out.println (a); */
+
+        System.out.println (Math.sqrt (Math.exp (82, 2) - 4 * 9 * 9));
     }
 }
