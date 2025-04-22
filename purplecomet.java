@@ -1,6 +1,6 @@
 public class purplecomet {
     public static void main (String[] args) {
-        double num = Math.pow (12, 1);
+        double num = Math.pow (199, 2);
         for (int i = 2; i < 199; i += 3) {
             num += Math.pow (i, 2) - 4 * i;
         }
