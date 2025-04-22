@@ -21,5 +21,7 @@ public class purplecomet {
         System.out.println (num);
         sum += num;
         System.out.println (sum);
+        int a = 108 + 486 + 12* 216 + 1;
+        System.out.println (a);
     }
 }
