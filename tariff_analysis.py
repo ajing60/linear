@@ -108,6 +108,30 @@ if 'CHN_C26' in A.columns and 'CHN_C26' not in top_sectors:
 A_raw_subset = A.loc[top_sectors, top_sectors]
 A_tariff_raw_subset = A_tariff.loc[top_sectors, top_sectors]
 
+# === Hawkins-Simon Check for Subset ===
+from numpy.linalg import LinAlgError
+
+def check_hawkins_simon(matrix, label=""):
+    n = matrix.shape[0]
+    I_minus_A = np.eye(n) - matrix
+    try:
+        for k in range(1, n + 1):
+            minor = I_minus_A[:k, :k]
+            det = np.linalg.det(minor)
+            if det <= 0:
+                print(f"Hawkins-Simon condition violated at minor {k} of {label} (det = {det:.4e})")
+                return False
+        print(f"Hawkins-Simon condition satisfied for {label}: all leading principal minors positive")
+        return True
+    except LinAlgError as e:
+        print(f"Error checking Hawkins-Simon condition for {label}:", str(e))
+        return False
+
+print("Checking Hawkins-Simon condition for selected top sectors...")
+check_hawkins_simon(A_raw_subset.values, label="baseline subset")
+check_hawkins_simon(A_tariff_raw_subset.values, label="tariff-adjusted subset")
+
+
 # Scale for better visualization
 A_subset = A_raw_subset * 1e3
 A_tariff_subset = A_tariff_raw_subset * 1e3
